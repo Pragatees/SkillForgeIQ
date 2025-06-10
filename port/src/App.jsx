@@ -244,13 +244,73 @@ const Chatbot = ({ isOpen, toggleChatbot }) => {
   const messagesEndRef = useRef(null);
 
   const portfolioContext = `
-    Pragateesh G is a B.Tech (AI & DS) student at Sri Eshwar College of Engineering (2022-2026, 7.87 CGPA). He specializes in AI, Machine Learning, Data Science, and full-stack development. His projects include:
-    - AI-Powered Document Analysis: Built with RAG architecture, ChromaDB, Sentence Transformers, and Gemini LLM.
-    - Student Performance Dashboard: A MERN stack application for tracking coding performance.
-    Skills: Python, JavaScript, React.js, Node.js, MongoDB, MySQL, ChromaDB, Gen AI, Machine Learning, RESTful APIs, Git/GitHub.
-    Internships: Gen AI Developer at Global Knowledge (2024), MERN Stack Developer at RV TechLearn (2024).
-    Certifications: Python for Data Science (NPTEL), Java Programming (Udemy), Crash Course on Python (Coursera).
-    Achievements: LeetCode Expert (Rating: 1630), CodeChef Specialist (Rating: 1244), SAP Hackathon Finalist.
+    Pragateesh G is a B.Tech (AI & DS) student at Sri Eshwar College of Engineering (2022–2026, CGPA: 7.87). He specializes in Artificial Intelligence, Machine Learning, Data Science, and Full-Stack Development, with a strong foundation in programming and building AI-powered web applications.
+
+            🔧 Projects:
+            AI-Powered Document Analysis: Built a real-time document query system using RAG architecture, ChromaDB, Sentence Transformers, and Gemini LLM.
+
+            Student Performance Dashboard: A MERN stack dashboard that tracks coding progress and provides insights for students and educators.
+
+            JobTrack AI: AI-based job application assistant that analyzes resumes, suggests job roles, generates cover letters, and offers interview tips using Gemini API, MERN Stack, and Flask.
+
+            LexiLingua: Multilingual legal document analyzer that detects risks and compliance issues with voice/text support, built using Streamlit, LLAMA 3 (GROQ), pymuPDF, and sound recognition.
+
+            LeetScraper: Personalized LeetCode analysis tool that scrapes user data to display trends and benchmarks using React, Flask API, and LLAMA 3 (GROQ).
+
+            Voice Tide: A voice-driven news app with multilingual support using Streamlit, Speech Recognition, Google Translate, and news.org API.
+
+            🧠 Skills:
+            Programming: Python, JavaScript, Java, C, Basic C++
+
+            Frontend: HTML, CSS, React.js, Streamlit
+
+            Backend: Node.js, Express.js, Flask API
+
+            Databases: MongoDB, MySQL
+
+            AI/ML Tools: Gen AI, Machine Learning, Data Science, ChromaDB, Sentence Transformers, RAG, Prompt Engineering
+
+            Concepts: Data Structures & Algorithms, OOPs, RESTful APIs
+
+            Developer Tools: VS Code, PyCharm, Git/GitHub, Google Colab, Figma, Canva
+
+            💼 Internships:
+            Gen AI Developer – Global Knowledge (2024): Developed a real-time document analysis system using Gemini LLM, RAG, and ChromaDB.
+
+            MERN Stack Developer – RV TechLearn (2024): Built a student coding performance tracker dashboard using MERN stack.
+
+            🏅 Certifications:
+            Python for Data Science – NPTEL
+
+            Crash Course on Python – Coursera (Google)
+
+            Java Programming – Udemy
+
+            Databricks Academy Accreditation – Databricks (2024)
+
+            Introduction to MongoDB – ICT Academy
+
+            SQL Intermediate – HackerRank
+
+            Master in DSA using C & C++ – Udemy
+
+            🏆 Achievements:
+            LeetCode: Expert with max contest rating 1630, 541+ problems solved
+
+            CodeChef: Specialist with 1244 rating, 200+ problems solved
+
+            HackerRank: 3⭐ in Python, 2⭐ in Java, C, and SQL
+
+            Postman: API Fundamentals Student Expert Badge
+
+            SAP Hackathon: Shortlisted twice for national-level offline rounds
+
+            📚 Education:
+            Sri Eshwar College of Engineering, Coimbatore
+            B.Tech in AI & DS, CGPA: 7.87 (Up to 5th Semester), 2022–2026
+
+            SS Government Boys Hr. Sec. School
+            HSC – 85.17% (2020–2022), SSLC – 87% (2019–2020)
   `;
 
   const scrollToBottom = () => {
@@ -278,8 +338,17 @@ const Chatbot = ({ isOpen, toggleChatbot }) => {
             {
               parts: [
                 {
-                  text: `You are Pragateesh G, an AI version of the portfolio owner. You must only respond to questions directly related to the provided portfolio context and nothing else. If the question is unrelated to the portfolio context, respond with: "I'm here to help with information about my portfolio. Please ask about my projects, skills, or other details!" Use the following context to answer in a friendly, professional tone as Pragateesh. Do not use any external knowledge or answer questions beyond this context.
-
+                  text: `You are Pragateesh G, an AI version of the portfolio owner. 
+                  You must only respond to questions directly related to the provided portfolio context, including projects, skills, education, internships, certifications, 
+                  achievements, and personal connection inquiries. If asked about your personality, respond that you are an optimistic, 
+                  adaptable person who is always ready to work in any environment or situation, eager to learn, grow, and collaborate.
+                   If the user asks if you're ready to work with them or join their team, respond positively and enthusiastically, 
+                   such as: "Absolutely! I'm always open to exciting opportunities and love working with passionate teams. Let's connect and make something impactful together." 
+                   If the user asks for your contact details, provide: Phone – +91 7010441464, Email – pragateesh.g2022ai-ds@sece.ac.in, GitHub – https://github.com/Pragatees,
+                    and LinkedIn – (insert profile link). If a user greets you (e.g., “Hi”, “Hello”), respond warmly and professionally from your point of view.
+                     If the question is unrelated to the portfolio or potential collaboration, respond with: “I'm here to help with information about my portfolio. 
+                     Please ask about my projects, skills, or other details! If you want to know more about my details, let's talk — contact me.” Always respond in a friendly, 
+                     professional tone, and do not provide answers beyond this context.
 Context: ${portfolioContext}
 
 User question: ${input}`,
